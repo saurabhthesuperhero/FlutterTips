@@ -196,6 +196,35 @@ import 'package:google_fonts/google_fonts.dart';
 ```dart
 SizedBox(height: 80)
 //You can use it with childrens or two buttons and many..
+```
 
+### Simple Text Field In Container
+
+###### Define Text Editing Controller first
+
+```dart
+  TextEditingController nameController = TextEditingController();
+```
+
+###### Text Field
+
+```dart
+   Container(
+   margin: EdgeInsets.all(40),
+                    child: TextField(
+                        controller: nameController,
+                        decoration: InputDecoration(
+                            hintText: 'I realize my worth..today',
+                            hintStyle: GoogleFonts.alice(color: Colors.white)),
+                        onChanged: (text) {
+                          setState(() {
+                            // fullName = text;
+                            //you can access nameController in its scope to get
+                            // the value of text entered as shown below
+                            //fullName = nameController.text;
+                          });
+                        }),
+                  ),
+               
 ```
 
