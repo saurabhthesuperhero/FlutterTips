@@ -60,3 +60,124 @@ class ContaPage extends StatelessWidget {
           ),
 ```
 
+
+
+### Decoration Gradient Color
+
+```dart
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+              //provide begin and end
+              begin: Alignment(6.123234262925839e-17, 1),
+              end: Alignment(-1, 6.123234262925839e-17),
+              //Optional u can use this too
+                begin: Alignment.topLeft,//well it is preferred method
+      			end: Alignment.bottomRight,
+      			stops: [0.3, 1],//it manages how much color to extend
+              
+              colors: [
+                  //Provide Colors here
+                Color.fromRGBO(69, 182, 73, 1),
+                Color.fromRGBO(46, 196, 182, 1)
+              ]),
+        ),
+```
+
+
+
+### Show ModalBottomSheet halfScreen Popup:
+
+```dart
+      onPressed: () {
+          //Starts here 
+          showModalBottomSheet<void>(
+            context: context,
+            builder: (BuildContext context) {
+              return Container(
+                height: 200,
+                color: Colors.amber,
+                child: Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                        //can add childrens here
+                      const Text('Modal BottomSheet'),
+                    ],
+                  ),
+                ),
+              );
+            },
+          );
+        },
+```
+
+### Border Radius
+
+```dart
+decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                      //many methods are there like
+                      //borderRadius.all(),..etc..
+                      topLeft: Radius.circular(25),
+                      topRight: Radius.circular(25)),
+
+)
+```
+
+### Important Modal Bottom Sheet points:
+
+#### In Bottom Sheet if we apply radius it may show white color at background
+
+###### So 2 Solutions :
+
+###### 1.Override 
+
+```dart
+ showModalBottomSheet<void>(
+            backgroundColor: Colors.transparent,
+            ......
+            .
+            //Bottom Sheet code
+```
+
+###### 2.Set Theme
+
+```dart
+MaterialApp(
+    theme: ThemeData(
+      // Draw all modals with a white background and top rounded corners
+      bottomSheetTheme: BottomSheetThemeData(
+        backgroundColor: Colors.white,
+          //change background color here or try transparent
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(top: Radius.circular(10))
+        )
+      )
+    ),
+```
+
+### Use Google Font
+
+```dart
+//import
+import 'package:google_fonts/google_fonts.dart';
+
+
+//This is override method which I like
+ Text('What made you Happy today?',
+     style:
+    GoogleFonts.alice(color: Colors.white, fontSize: 18),
+   //Change alice with preffered font
+     ),
+```
+
+### Add Space Box (Empty Space)
+
+```dart
+SizedBox(height: 80)
+//You can use it with childrens or two buttons and many..
+
+```
+
