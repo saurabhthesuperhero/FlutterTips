@@ -1,5 +1,21 @@
 # Flutter Tips
 
+**Hey** **Coders** ,
+
+Welcome to flutter tips,
+
+Here I m going to add Flutter snippets  which are useful,
+
+although yes we can google and all but instead I want it all at one place,
+
+So as I'm Going to learn I'm Going to update this page.
+
+So Enjoy Flutter Guys !!
+
+
+
+
+
 ### FAB  at center
 
 ```dart
@@ -63,6 +79,8 @@ class ContaPage extends StatelessWidget {
 
 
 ### Decoration Gradient Color
+
+Reference for extra:[Gradient](https://owenhalliday.co.uk/flutter-gradient/)
 
 ```dart
       body: Container(
