@@ -8,7 +8,11 @@ Here I m going to add Flutter snippets  which are useful,
 
 although yes we can google and all but instead I want it all at one place,
 
-So as I'm Going to learn I'm Going to update this page.
+So easy to copy and use ,
+
+Basically I was making this for me only ,later I thought it can be useful to every coder,
+
+So as I'm Going to learn as well as  I'm Going to update this page.
 
 So Enjoy Flutter Guys !!
 
@@ -226,5 +230,17 @@ SizedBox(height: 80)
                         }),
                   ),
                
+```
+
+### Open OnPressed() new Activity or widget you can say
+
+```dart
+  onPressed: () {
+        Navigator.push(
+          context,
+           MaterialPageRoute(
+           builder: (context) => FeelingScreen()),//pass target widget
+            );
+    },
 ```
 
