@@ -1,3 +1,13 @@
 remote_theme: pmarsceill/just-the-docs
 # Define Jekyll collections
-anchor_js_targets: [h1, h2, h3, h4, h5, h6]
+redcarpet:
+    extensions: [
+        'no_intra_emphasis',
+        'fenced_code_blocks',
+        'autolink',
+        'strikethrough',
+        'superscript',
+        'with_toc_data',
+        'tables',
+        'hardwrap'
+    ]
