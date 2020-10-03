@@ -244,3 +244,98 @@ SizedBox(height: 80)
     },
 ```
 
+### Gesture Detector which can be applied to any component
+
+###### So we can make any Component clickable Unlike OnPressed() its is available to 
+
+###### some components only,So Just Wrap any component By Gesture Detector to use it.
+
+```dart
+  GestureDetector(
+          child: Image.asset("assets/images/funnyemo.png"),//my widget
+                        onTap: () {//Gesture detector method
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => Jardone()),
+                  );
+        }),
+```
+
+### Center Column or Row Content
+
+###### Column:
+
+```dart
+mainAxisAlignment: MainAxisAlignment.center //Center Column contents vertically,
+crossAxisAlignment: CrossAxisAlignment.center //Center Column contents horizontally,
+```
+
+###### Row:
+
+```dart
+mainAxisAlignment: MainAxisAlignment.center //Center Row contents horizontally,
+crossAxisAlignment: CrossAxisAlignment.center //Center Row contents vertically,
+```
+
+### Add Image
+
+###### Add Image from asset:
+
+```dart
+  Image.asset(
+      "assets/images/jar.png",
+       width: 200,//optional pass if large or small image 
+       height: 400,//or want to fit in the image 
+   )
+```
+
+###### Size :By height and width
+
+###### For more reference:[images size](https://www.woolha.com/tutorials/flutter-display-and-adjust-images-from-assets)
+
+```dart
+	//Image will be render in a 100 x 100 box.
+  Image.asset(
+    'assets/images/file-name.jpg',
+    height: 100,
+    width: 100,
+ )
+```
+
+###### Adjust Image Size by Scale
+
+```dart
+ //The image will look bigger if the scale is less than 1.
+ Image.asset(
+    'assets/images/file-name.jpg',
+    scale: 0.8
+ )
+```
+
+###### Fit Image Size
+
+```dart
+//In this example, the image size will be fitted to its width.
+Image.asset(
+    'assets/images/file-name.jpg',
+    height: 100,
+    width: 200,
+    fit: BoxFit.fitWidth,
+ )
+```
+
+###### Blend Image with a Color
+
+```dart
+// Define a color that will be blended to the image's pixels.
+Image.asset(
+    'assets/images/file-name.jpg',
+    height: 100,
+    width: 100,
+    color: Colors.red,
+    colorBlendMode: BlendMode.darken,
+    fit: BoxFit.fitWidth,
+ )
+    
+```
+
